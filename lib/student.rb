@@ -44,12 +44,11 @@ class Student
 end 
 
 
- def self.create(name:, grade:)
-    student_new = self.new(name, grade)
-    student_new.save
-    student_new
+def self.create(name:, grade:)
+    s_new = Student.new(name, album)
+    s_new.save
+    s_new
   end
-  
   
   def self.new_from_db(row)
     id = row[0]
